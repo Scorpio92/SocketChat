@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:paddingTop="@dimen/dp_12"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="false"
+            android:src="@mipmap/logo"
+            android:paddingBottom="@dimen/dp_18"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/actionContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_18"
+            android:paddingRight="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_36">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextViewBaseStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/welcome_text1"
+                android:textSize="@dimen/sp_16" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextViewBaseStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_text2" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/actionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/regBtn"
+                style="@style/ButtonBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_button" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/authBtn"
+                style="@style/TextViewUrlStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_18"
+                android:text="@string/recover_button" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/link"
+            style="@style/TextViewUrlStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/dp_12"
+            android:text="@string/link"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

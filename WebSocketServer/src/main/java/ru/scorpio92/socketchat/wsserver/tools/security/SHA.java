@@ -1,4 +1,4 @@
-package ru.scorpio92.wsserver.tools.security;
+package ru.scorpio92.socketchat.wsserver.tools.security;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

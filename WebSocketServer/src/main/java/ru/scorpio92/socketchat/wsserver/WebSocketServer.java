@@ -1,6 +1,6 @@
-package ru.scorpio92.wsserver;
+package ru.scorpio92.socketchat.wsserver;
 
-import ru.scorpio92.wsserver.tools.Logger;
+import ru.scorpio92.socketchat.wsserver.tools.Logger;
 
 /**
  * Основной класс

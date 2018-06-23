@@ -1,4 +1,4 @@
-package ru.scorpio92.wsserver;
+package ru.scorpio92.socketchat.wsserver;
 
 public class Constants {
 

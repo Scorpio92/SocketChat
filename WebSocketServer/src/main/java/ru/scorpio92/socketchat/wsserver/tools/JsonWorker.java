@@ -1,4 +1,4 @@
-package ru.scorpio92.wsserver.tools;
+package ru.scorpio92.socketchat.wsserver.tools;
 
 
 import com.google.gson.Gson;

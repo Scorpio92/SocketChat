@@ -1,10 +1,10 @@
-package ru.scorpio92.wsserver.tools;
+package ru.scorpio92.socketchat.wsserver.tools;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static ru.scorpio92.wsserver.Constants.BYTE_BUFFER;
+import static ru.scorpio92.socketchat.wsserver.Constants.BYTE_BUFFER;
 
 
 public class IO {

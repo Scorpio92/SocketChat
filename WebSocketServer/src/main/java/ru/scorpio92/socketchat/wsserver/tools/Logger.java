@@ -1,7 +1,7 @@
-package ru.scorpio92.wsserver.tools;
+package ru.scorpio92.socketchat.wsserver.tools;
 
 
-import ru.scorpio92.wsserver.ServerConfigStore;
+import ru.scorpio92.socketchat.wsserver.ServerConfigStore;
 
 public class Logger {
 

@@ -1,5 +1,6 @@
 package ru.scorpio92.socketchat.wsserver;
 
+import ru.scorpio92.socketchat.wsserver.api.PublicAPI;
 import ru.scorpio92.socketchat.wsserver.tools.Logger;
 
 /**
@@ -12,5 +13,8 @@ public class WebSocketServer {
         //инициализация глобального конфига
         ServerConfigStore.init();
         Logger.log("ServerConfigStore init complete");
+
+        //инициализация публичной части API
+        new PublicAPI().start();
     }
 }

@@ -8,8 +8,8 @@ public class ServerConfigStore {
 
     private static final String PROP_FILE_NAME = "server.properties";
 
-    public static int SERVER_PORT;
-    public static boolean LOGGER_ENABLED;
+    public static int SERVER_PORT = 8081;
+    public static boolean LOGGER_ENABLED = true;
 
     static void init() throws IOException {
         Properties props = new Properties();

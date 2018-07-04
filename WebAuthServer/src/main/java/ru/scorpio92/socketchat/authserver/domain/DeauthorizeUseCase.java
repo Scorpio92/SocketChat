@@ -9,7 +9,7 @@ import ru.scorpio92.socketchat.authserver.data.model.message.request.DeauthServe
 import ru.scorpio92.socketchat.authserver.tools.JsonWorker;
 import ru.scorpio92.socketchat.authserver.tools.Logger;
 
-public class DeauthorizeUseCase implements UseCase {
+public class DeauthorizeUseCase implements IUseCase {
 
     @Override
     public BaseMessage execute(BaseMessage requestMessage) {

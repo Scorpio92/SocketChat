@@ -12,7 +12,7 @@ import ru.scorpio92.socketchat.authserver.tools.Logger;
 import ru.scorpio92.socketchat.authserver.tools.ValidateUtils;
 import ru.scorpio92.socketchat.authserver.tools.security.SHA;
 
-public class RegisterUseCase implements UseCase {
+public class RegisterUseCase implements IUseCase {
 
     @Override
     public BaseMessage execute(BaseMessage requestMessage) {

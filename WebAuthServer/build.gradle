@@ -1,8 +1,32 @@
 apply plugin: 'java-library'
 
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-}
-
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
+version = '1.0'
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Main-Class': 'ru.scorpio92.socketchat.authserver.AuthServer'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.postgresql:postgresql:42.2.2.jre7'
+
+    implementation 'javax.websocket:javax.websocket-api:1.1'
+    implementation 'org.glassfish.tyrus:tyrus-server:1.13.1'
+    implementation 'org.glassfish.tyrus:tyrus-container-grizzly-server:1.13.1'
+}

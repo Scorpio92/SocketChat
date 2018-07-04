@@ -15,7 +15,7 @@ import ru.scorpio92.socketchat.authserver.tools.Logger;
  * Хендлер-класс выполняющий обращение к роутеру за обработкой запроса
  * после обработки запроса в роутере отсылает сообщение клиенту
  */
-public class HttpConnectionHandler extends Thread {
+public abstract class HttpConnectionHandler extends Thread {
 
     private HttpExchange exchange;
 
@@ -34,8 +34,8 @@ public class HttpConnectionHandler extends Thread {
         }
         */
         try {
-            handleRequest();
-        } catch (UnsupportedEncodingException e) {
+            transformRequestToString();
+        } catch (IOException e) {
             Logger.error(e);
         } finally {
             if (exchange != null)
@@ -43,17 +43,14 @@ public class HttpConnectionHandler extends Thread {
         }
     }
 
-    private void handleRequest() throws UnsupportedEncodingException {
+    private void transformRequestToString() throws IOException {
         //читаем то что пришло от клиента
-        String requestBody = null;
-        try {
-            requestBody = new String(IO.getBytesFromInputStream(exchange.getRequestBody()), Constants.CHARSET);
-        } catch (Exception e) {
-            Logger.error(e);
-        }
+        String requestBody =  new String(IO.getBytesFromInputStream(exchange.getRequestBody()), Constants.CHARSET);
         //обрабатываем и возвращаем массив байт
-        sendMessageToClient(exchange, new ServiceRouter(requestBody).getResult());
+        sendMessageToClient(exchange, handleRequest(requestBody));
     }
+
+    abstract byte[] handleRequest(String requestString) throws UnsupportedEncodingException;
 
     private void sendMessageToClient(HttpExchange exchange, byte[] bytes) {
         OutputStream os = exchange.getResponseBody();

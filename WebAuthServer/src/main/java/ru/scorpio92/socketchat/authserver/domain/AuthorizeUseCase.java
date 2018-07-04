@@ -19,7 +19,7 @@ import ru.scorpio92.socketchat.authserver.tools.ValidateUtils;
 import ru.scorpio92.socketchat.authserver.tools.security.SHA;
 import ru.scorpio92.socketchat.authserver.tools.security.SecRandom;
 
-public class AuthorizeUseCase implements UseCase {
+public class AuthorizeUseCase implements IUseCase {
 
     @Override
     public BaseMessage execute(BaseMessage requestMessage) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="WebAuthServer" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="WebAuthServer" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -27,59 +27,77 @@
     </content>
     <orderEntry type="jdk" jdkName="JDK" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library name="Gradle: postgresql-42.2.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/postgresql-42.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library name="Gradle: gson-2.8.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/gson-2.8.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="RUNTIME">
-      <library name="Gradle: postgresql-42.2.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/postgresql-42.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="RUNTIME">
-      <library name="Gradle: gson-2.8.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/gson-2.8.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library name="Gradle: postgresql-42.2.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/postgresql-42.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library name="Gradle: gson-2.8.2">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/gson-2.8.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.postgresql:postgresql:42.2.2.jre7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-core:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.tyrus:tyrus-spi:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.grizzly:grizzly-http-server:2.3.25" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.grizzly:grizzly-http:2.3.25" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.grizzly:grizzly-framework:2.3.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.2.2.jre7" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-core:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.tyrus:tyrus-spi:1.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.grizzly:grizzly-http-server:2.3.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.grizzly:grizzly-http:2.3.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.grizzly:grizzly-framework:2.3.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.postgresql:postgresql:42.2.2.jre7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-server:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-container-grizzly-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-client:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-core:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.tyrus:tyrus-spi:1.13.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.grizzly:grizzly-http-server:2.3.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.grizzly:grizzly-http:2.3.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.grizzly:grizzly-framework:2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: gson-2.8.5" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: postgresql-42.2.2.jre7" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-container-grizzly-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-container-grizzly-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-core-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: tyrus-spi-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: grizzly-http-server-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: grizzly-http-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: grizzly-framework-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: gson-2.8.5" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: postgresql-42.2.2.jre7" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-container-grizzly-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-container-grizzly-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-core-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: tyrus-spi-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: grizzly-http-server-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: grizzly-http-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: grizzly-framework-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: gson-2.8.5" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: postgresql-42.2.2.jre7" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-container-grizzly-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-server-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-container-grizzly-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-client-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-core-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: tyrus-spi-1.13.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: grizzly-http-server-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: grizzly-http-2.3.25" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: grizzly-framework-2.3.25" level="project" />
   </component>
 </module>

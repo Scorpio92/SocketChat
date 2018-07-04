@@ -12,7 +12,7 @@ import ru.scorpio92.socketchat.authserver.data.model.message.response.CheckToken
 import ru.scorpio92.socketchat.authserver.tools.JsonWorker;
 import ru.scorpio92.socketchat.authserver.tools.Logger;
 
-public class CheckTokenUseCase implements UseCase {
+public class CheckTokenUseCase implements IUseCase {
 
     @Override
     public BaseMessage execute(BaseMessage requestMessage) {

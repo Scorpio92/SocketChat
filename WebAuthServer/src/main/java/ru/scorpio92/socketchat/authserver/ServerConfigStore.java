@@ -9,19 +9,19 @@ public class ServerConfigStore {
     private static final String PROP_FILE_NAME = "server.properties";
 
     /**
-     * Public API
+     * Public HttpAPI
      */
-    public static int PAPI_SERVER_PORT;
+    public static int PAPI_SERVER_PORT = 8031;
     /**
-     * Service API
+     * Service HttpAPI
      */
-    public static int SAPI_SERVER_PORT;
+    public static int SAPI_SERVER_PORT = 8032;
 
-    public static String DB_NAME;
-    public static String DB_USER;
-    public static String DB_PASSWORD;
+    public static String DB_NAME = "auth_db";
+    public static String DB_USER = "auth_server";
+    public static String DB_PASSWORD = "auth_server";
 
-    public static boolean LOGGER_ENABLED;
+    public static boolean LOGGER_ENABLED = true;
 
     static void init() throws IOException {
         Properties props = new Properties();

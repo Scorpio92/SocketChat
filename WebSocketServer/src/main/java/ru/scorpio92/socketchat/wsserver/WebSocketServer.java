@@ -1,11 +1,12 @@
 package ru.scorpio92.socketchat.wsserver;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ru.scorpio92.socketchat.wsserver.api.API;
 import ru.scorpio92.socketchat.wsserver.api.PublicEndpoint;
 import ru.scorpio92.socketchat.wsserver.tools.Logger;
+
+import static ru.scorpio92.socketchat.wsserver.api.API.addServer;
+import static ru.scorpio92.socketchat.wsserver.api.API.startServers;
+import static ru.scorpio92.socketchat.wsserver.api.API.stopServers;
 
 /**
  * Основной класс
@@ -14,16 +15,20 @@ public class WebSocketServer {
 
     private static volatile boolean stop = false;
 
-    private static List<API> servers = new ArrayList<>();
 
     public static void main(String[] args) throws Throwable {
+
+        Logger.log("WebSocketServer starting...");
 
         //инициализация глобального конфига
         //ServerConfigStore.init();
         Logger.log("ServerConfigStore init complete");
 
         //инициализация публичной части API
-        servers.add(new API(ServerConfigStore.SERVER_PORT, PublicEndpoint.class));
+        API api = new API(ServerConfigStore.SERVER_PORT, PublicEndpoint.class);
+        api.setCallback(getApiCallback());
+
+        addServer(api);
 
         startServers();
 
@@ -33,20 +38,31 @@ public class WebSocketServer {
                 break;
             }
         }
+
+        Logger.log("WebSocketServer finished");
     }
 
-    private static void startServers() {
-        for (API api : servers)
-            api.run();
-    }
-
-    private static void stopServers() {
-        for (API api : servers)
-            api.stopAPI();
-        servers.clear();
-    }
-
-    public static void finish() {
+    private static void finish() {
         stop = true;
+    }
+
+    private static API.Callback getApiCallback() {
+        return new API.Callback() {
+            @Override
+            public void onApiStart(String apiName) {
+                Logger.log(apiName + " API was started");
+            }
+
+            @Override
+            public void onApiStop(String apiName) {
+                Logger.log(apiName + " API was stopped");
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Logger.error(e);
+                finish();
+            }
+        };
     }
 }
